@@ -1,0 +1,252 @@
+.success-message,
+   .fail-message, 
+   .NNNNN-message,
+   .NNNNY-message,
+   .wait-message { 
+           display: none;
+           position: relative;
+           left: 30px;
+        }
+   .input.success ~ .success-message{
+   		display : block;
+   		color:green;
+        font-size: 12px;
+        margin-top: -20px   
+   }	
+   .input.fail ~ .fail-message {
+            display: block;
+            color : red;
+            font-size: 12px;
+        	margin-top: -20px  
+            
+        }
+   #success-message,
+   #fail-message { 
+           display: none;      
+        }
+   .input.success ~ #success-message{
+   		display : block;
+   		color:green;
+        font-size: 12px;
+        margin-top: -20px;
+		position: relative;
+        left: 30px;    
+   }
+   .input.fail ~ #fail-message{
+   		display : block;
+   		color : red;
+        font-size: 12px;
+        margin-top: -20px;
+		position: relative;
+        left: 30px;    
+   }
+   .input.NNNNY ~ .success-message{
+   		display : block;
+   		color:green;
+        font-size: 12px;
+        margin-top: -20px   
+   }	   
+   .input.NNNNN ~ .NNNNN-message{
+   		display : block;
+   		color : red;
+        font-size: 12px;
+        margin-top: -20px  
+   }
+   .input.NNNNN ~ .success-message{
+   		display : none;
+   		color:green;
+        font-size: 12px;
+        margin-top: -20px   
+   }
+   .wait-message{
+        font-size: 12px;
+        margin-top: -20px;
+  	 	margin-left: 180px;
+   }
+  
+   .text-title{
+   	position: relative;
+   	top: 20px;
+   	left: 30px;   	
+   }
+   .text-title i{
+   	color: red;
+   }
+   .birth{
+   	color: rgb(128, 64, 64);
+   	font-size: 0.75em;
+   }
+   .timer{
+   	display: flex;
+   	align-items: center;
+    font-size: 12px;   	
+   	color: red;
+   	margin-left: 30px;
+    margin-top: -20px;   	
+   }
+   
+   .send-btn:disabled{
+   		opacity: 70%;
+   		cursor: no-drop ;
+   		
+   }
+   .serial-btn:disabled{
+   		opacity: 70%;
+   		cursor: no-drop ;   
+   }
+    #form-button:disabled{
+   		opacity: 70%;
+   		cursor: no-drop ;   
+   }
+   
+   * {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset {
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.morebtn {
+    display: none;
+}
+
+li {
+    list-style: none;
+}
+
+.inner {
+    position: relative;
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.wrapper>div.inner {
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+.Mplus{
+    position: relative;
+}
+.Mhead{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.Mhead img{
+    width: 150px;
+    height: 100px;
+    padding-bottom: 50px;
+    padding-left: 250px;
+    
+}
+.Mhead h1{
+	position: relative;
+	right: 45%;
+    font-size: 30px;
+    padding-top: 100px;    
+/*     margin-bottom: 30px; */
+    
+}
+.Mbody-container{
+	width: 1600px;
+}
+.Mbody{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 70px;
+    padding-top: 30px;     
+}
+.Mbody input{
+    width: 450px;
+    height: 50px;
+    border: 1px solid lightgrey;
+    border-radius: 10px 10px;
+    margin: 30px;
+    font-size: 15px;
+    padding-left: 15px;
+}
+.Mbody input:focus{
+    outline: 1px solid lightgrey;
+}
+.Mbody button{
+    width: 455px;
+    height: 50px;
+    margin: 30px;
+    align-items: center;
+    border: none;
+    border-radius: 10px 10px;
+    background-color: #ffe9b1;
+    font-size: 17px;
+    font-weight: bold;
+    color : #E27C5E;
+    cursor: pointer;
+
+}
+@media screen and (max-width: 1420px) {
+.inner {
+    width: 100%; 
+    padding: 0 20px;
+    box-sizing: border-box;
+    }
+}
+@media screen and (max-width: 1240px) {
+    .wrapper > div.inner {
+        display: block;
+    }
+    .Mplus{
+    width: 100%;
+    height: 105px;
+    margin-bottom: 15px;
+    }
+    .Mhead{
+        position: unset;
+        padding: 0 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    .Mhead a{
+        margin-bottom: 0;
+    }
+    .Mbody{
+        position: relative;
+    }
+    .Mbody input button{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 768px) {
+    .inner {
+        padding: 0 20px;
+    }
+    .Mhead img{
+        width: 250px;
+    }
+    .Mhead h1{
+        font-size: 30px;
+    }
+    .Mbody input{
+        width: 100%;
+    }
+    .Mbody button{
+        width: 105%;
+    }
+}
+	           

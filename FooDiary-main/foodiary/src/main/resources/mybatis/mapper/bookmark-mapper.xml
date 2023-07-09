@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="bookmark">
+	<select id="cert" parameterType="int" resultType="int">
+		select 
+			count(*) 
+		from 
+			bookmark 
+		where 
+			review_no=#{reviewNo} and mem_no=#{memNo}
+	</select>
+	<select id="list" parameterType="int" resultType="ReviewDto">
+		select 
+		    R.* 
+		from 
+    		review R
+		right outer join
+			(select review_no from bookmark where mem_no=#{memNo}) M
+		on R.review_no=M.review_no
+	</select>
+	<insert id="insert" parameterType="int">
+		insert into
+
+			bookmark(bookmark_no,review_no,mem_no)
+		values(bookmark_seq.nextval,#{reviewNo},#{memNo})
+	</insert>
+	<delete id="delete" parameterType="int">
+		delete 
+		from 
+			bookmark 
+		where 
+			review_no=#{reviewNo} and mem_no=#{memNo}
+	</delete>
+</mapper>

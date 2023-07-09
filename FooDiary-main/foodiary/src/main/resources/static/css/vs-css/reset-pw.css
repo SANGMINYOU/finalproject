@@ -1,0 +1,180 @@
+   .success-message,
+   .fail-message 
+   		{ 
+           display: none;
+           position: relative;
+           left: 30px;           
+        }
+   .input.success ~ .success-message{
+   		display : block;
+   		color:green;
+        font-size: 12px;
+        margin-top: -20px;
+        left: 30px;  
+   }	
+   .input.fail ~ .fail-message {
+    	display : block;
+   		color : red;
+        font-size: 12px;
+        margin-top: -20px;
+		position: relative;
+		        left: 30px;  
+        }
+        
+            * {
+margin: 0;
+padding: 0;
+}
+
+fieldset {
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style: none;
+}
+
+.inner {
+    position: relative;
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.wrapper>div.inner {
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+}
+.resetPW{
+    position: relative;
+}
+.resetH{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.resetH img{
+    width: 150px;
+    height: 100px;
+    padding-bottom: 40px;
+    padding-right: 770px;
+}
+.resetH h1{
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.resetB{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#resetT{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+/* 	align-items: center; */
+}
+#resetT #resetT1{
+	position: relative;
+	right: 180px;
+	    right: -30px;
+}
+#resetT label{
+	position: relative;
+	top: 20px;
+	    right: -30px;
+}
+.resetB input{
+    width: 450px;
+    height: 50px;
+    border: 1px solid lightgrey;
+    border-radius: 10px 10px;
+    margin: 30px;
+    font-size: 15px;
+    padding-left: 15px;
+}
+
+.resetB input:focus{
+	outline: 1px solid lightgrey;
+	}
+	
+label i{
+	color: red;
+}
+.resetB button{
+    width: 455px;
+    height: 50px;
+    margin: 30px;
+    align-items: center;
+    border-radius: 10px 10px;
+    background-color: #ffe9b1;
+    border: none;
+    color: #E27C5E;
+    font-size: 17px;
+    font-weight: bold;
+}
+@media screen and (max-width: 1420px) {
+    .inner {
+        width: 100%; 
+        padding: 0 20px;
+        box-sizing: border-box;
+        }
+    }
+    @media screen and (max-width: 1240px) {
+        .wrapper > div.inner {
+            display: block;
+        }
+        .resetPW{
+        width: 100%;
+        height: 105px;
+        margin-bottom: 15px;
+        }
+        .resetH{
+            position: unset;
+            padding: 150px 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+        .resetH a{
+            margin-bottom: 0;
+        }
+        .resetB{
+            position: relative;        
+        }
+        .resetB p button{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .inner {
+            padding: 0 20px;
+        }
+        .resetH img{
+            width: 250px;
+        }
+        .resetB p{
+            width: 100%;
+            font-size: 20px;
+        }
+        .resetPW button{
+            width: 100%;
+        }
+    }

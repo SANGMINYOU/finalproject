@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset {
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style: none;
+}
+
+.inner {
+    position: relative;
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.wrapper > div.inner{
+    display: flex; 
+    gap: 50px;
+    justify-content: space-between;
+}
+
+.boardM{
+    position: relative;
+    top: 100px;
+}
+
+.boardM img {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    left: 340px;
+    bottom: 30px;
+    border-radius: 50%;
+    object-fit:cover;
+}
+
+.boardT {
+    position: relative;
+    bottom: 150px;
+    margin-left: 550px;
+    margin-top : 30px;
+}
+  
+.boardT .boardT1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.fa-2x{
+	font-size: 20px;
+}
+
+.boardT1 li {
+	position: relative;
+	top: 30px;
+    font-size: 20px;
+    width: 100%;
+}
+
+.boardT1 button {
+    width: 200px;
+    height: 30px;
+    background: #ffe9b1;
+    border: 1px solid white;
+    border-radius: 10px 10px;
+}
+.boardT1 button a{
+	color: #e27c5e;
+	font-weight: bold;
+}
+.boardT1 #Ta1{
+    width: 100px;
+    text-align: center;
+}
+.boardT1 #Timg1{
+	position: relative;
+    width: 25px;
+}
+.boardT a img{
+	position: relative;
+	right: 1080px;
+	bottom: 10px;
+    width: 160px;  
+}
+.boardT .level-img{
+	position: relative;
+	top: 3px;
+	width: 24px;
+	height: 24px;
+	margin-left: 5px;
+	margin-right: 5px;
+	object-fit:cover;
+}
+
+.boardT .boardT2 {
+    margin-bottom: 50px;
+}
+
+.boardT2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 17px;
+    margin-top : 20px;
+}
+
+.boardT2 li {
+	position: relative;
+	margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    right: 130px;
+}
+
+.boardT p{
+	position: relative;
+	bottom: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 600px;
+    height: 120px;
+}
+
+.boardA{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    margin-top: -200px;
+}
+.boardA > ul{
+    border-bottom: 1px solid black;
+}
+
+.boardA ul li {
+    width: 100%;  
+    font-weight: bold;
+    margin-top: 60px;
+    margin-bottom: 15px;
+    
+}
+.boardA ul li a{
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+.section1{
+	width: 800px;
+	margin: 0 auto;
+} 
+
+.feed{
+	display: flex;
+    flex-wrap:wrap;
+    justify-content:flex-start;
+    align-items:center;
+    gap: 20px;
+    flex: 1;  
+    margin-bottom: 50px;
+}
+
+.feed li:last-child{ margin-right: 0; }
+
+.feedimg a{
+  display: block; /* 영역적용위해 사용 */
+  width: 100%; height: 100%;
+
+  overflow: hidden;
+
+  position: relative; /* absolute의 기본기준은 body로 처리 - 현재 요소로 기준변경 */
+}
+
+.feedimg figure{
+  width: 100%; height: 100%;
+  object-fit:cover;
+}
+.feedimg figcaption{
+  object-fit:cover;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.7);
+
+  position: absolute; /* 이미지와 겹치게 처리 */
+  top: 0; left: 0; ;
+
+  color: #fff; text-align: center;
+  line-height: 260px;
+
+  opacity: 0; /* 처음엔 안보이고 */
+ 
+  transition: 0.3s;
+}
+.feedimg .relative{
+	width: 250px;
+	height: 250px;
+	object-fit:cover;
+}
+
+.feedimg a:hover figcaption, .feedimg a:focus figcaption{
+  /* 마우스를 올리면 보이게 처리 */
+  opacity: 1;
+}
+.img-size{
+	width:250px;
+	height:250px;
+	object-fit:cover;
+	
+}
+@media screen and (max-width: 1420px) {
+    .inner {
+        width: 100%; 
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+}
+@media screen and (max-width: 1240px) {
+    .wrapper > div.inner {
+        display: block;
+    }
+    .boardF{
+        width: 100%;
+        height: 105px;
+        margin-bottom: 15px;
+    }
+    .boardM img{
+        left: 30px;
+        width: 300px;
+        height: 300px;
+    }
+    .boardT .boardT1{
+        position: relative;
+        right: 300px;
+        bottom: -50px;
+        width: 500px;
+    }
+    .boardT .boardT1 li{
+        font-size: 23px;
+    }
+    .boardT .boardT1 button{
+        width: 130px;
+    }
+    .boardT .boardT1 button a{
+        font-size: 10px;
+    }
+    .boardT2{
+        position: relative;
+        right: 300px;
+        top: 20px;
+    }
+    .boardT2 li{
+        font-size: 12px;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    p{
+        position: relative;
+        top: 20px;
+        right: 300px;
+        font-size: 12px;
+    }
+    .boardA{
+        position: relative;
+        bottom: 80px;
+        right: 60px;
+    }
+    .boardA ul li a{
+        font-size: 15px;
+    }
+
+    .section1{
+        position: relative;
+        top: 420px;
+        right: 60px;
+        width: 100%;
+    }
+    
+    
+}
+@media screen and (max-width: 768px) {
+    .inner {
+        padding: 0 20px;
+    }
+    .boardF{
+        width: 100%;
+    }
+    .boardM img{
+        width: 200px;
+        height: 200px;
+    }
+    
+    .section1{
+        display: none;
+    }
+
+}
